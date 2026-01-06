@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Login Page</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: #cfd8e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.container p {
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.container span {
+  font-weight: bold;
+  color: #000;
+}
+
+.login-box {
+  background: #e1e8f0;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px #aab3c2,
+              -10px -10px 20px #ffffff;
+  text-align: center;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.login-box input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 15px;
+  outline: none;
+  background: #d7dde5;
+  box-shadow: inset 4px 4px 10px #bcc3cc,
+              inset -4px -4px 10px #f5faff;
+  font-size: 1em;
+}
+
+.login-box button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  background: #d7dde5;
+  color: #333;
+  font-weight: bold;
+  box-shadow: 4px 4px 10px #bcc3cc,
+              -4px -4px 10px #f5faff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-box button:hover {
+  box-shadow: inset 4px 4px 10px #bcc3cc,
+              inset -4px -4px 10px #f5faff;
+}
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>3D Login Page | CSS</h1>
+    <p>Full video on youtube: <span>@mzcode01</span></p>
+
+    <div class="login-box">
+      <h2>Login</h2>
+      <input type="text" placeholder="Username">
+      <input type="password" placeholder="Password">
+      <button>Sign In</button>
+      <button onclick="window.location.href='register.html'">Register</button>
+    </div>
+  </div>
+  <script>
+  const loginButton = document.querySelector('.login-box button');
+
+  loginButton.addEventListener('click', function() {
+    const username = document.querySelector('.login-box input[type="text"]').value;
+    const password = document.querySelector('.login-box input[type="password"]').value;
+
+    if (username === 'basha' && password === '123') {
+        window.location.href = "index.html";
+    } else {
+      // Simulate login success (replace with real backend logic)
+      alert('Login successful!\nUsername: ' + username);
+    }
+  });
+</script>
+</body>
+</html>
